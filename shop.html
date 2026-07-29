@@ -893,9 +893,9 @@
 
               <div class="d-flex align-items-center gap-3">
                 <div class="d-flex align-items-center border border-secondary border-opacity-50 rounded-3 overflow-hidden">
-                  <button class="btn btn-sm text-white px-3" onclick="let q=document.getElementById('modalQty'); if(q.value>1) q.value--;">-</button>
-                  <input type="number" id="modalQty" value="1" min="1" max="10" class="form-control form-control-sm text-center border-0 text-white bg-transparent" style="width: 45px; font-weight:700;">
-                  <button class="btn btn-sm text-white px-3" onclick="let q=document.getElementById('modalQty'); q.value++;">+</button>
+                  <button class="btn btn-sm modal-qty-btn px-3" onclick="let q=document.getElementById('modalQty'); if(q.value>1) q.value--;">-</button>
+                  <input type="number" id="modalQty" value="1" min="1" max="10" class="form-control form-control-sm text-center border-0 modal-qty-input bg-transparent" style="width: 45px; font-weight:700;">
+                  <button class="btn btn-sm modal-qty-btn px-3" onclick="let q=document.getElementById('modalQty'); q.value++;">+</button>
                 </div>
 
                 <button id="modalAddToCartBtn" class="btn-orange-figma flex-grow-1 py-2 fs-6">
