@@ -1173,14 +1173,40 @@ body.light-theme .footer-contact-bar-figma {
 /* --------------------------------------------------------------------------
    MODAL LIGHT THEME & QUANTITY CONTROLLER OVERRIDES
    -------------------------------------------------------------------------- */
+.modal-close-btn {
+  filter: invert(1) grayscale(100%) brightness(200%) !important;
+  opacity: 0.8 !important;
+  transition: var(--transition) !important;
+}
+
+.modal-close-btn:hover {
+  opacity: 1 !important;
+}
+
 .modal-qty-btn {
   color: var(--text-primary) !important;
   font-weight: 700 !important;
+  transition: var(--transition) !important;
+}
+
+.modal-qty-btn:hover,
+.modal-qty-btn:focus {
+  background-color: rgba(148, 163, 184, 0.15) !important;
+  color: var(--text-primary) !important;
+  box-shadow: none !important;
 }
 
 .modal-qty-input {
   color: var(--text-primary) !important;
   font-weight: 800 !important;
+}
+
+.modal-qty-input:hover,
+.modal-qty-input:focus {
+  color: var(--text-primary) !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  outline: none !important;
 }
 
 body.light-theme .modal-content {
@@ -1204,11 +1230,29 @@ body.light-theme .modal-qty-btn {
   color: #0F172A !important;
 }
 
+body.light-theme .modal-qty-btn:hover,
+body.light-theme .modal-qty-btn:focus {
+  background-color: rgba(15, 23, 42, 0.08) !important;
+  color: #0F172A !important;
+}
+
 body.light-theme .modal-qty-input {
   color: #0F172A !important;
   background-color: transparent !important;
 }
 
-body.light-theme .btn-close-white {
-  filter: invert(1) grayscale(100%) brightness(0) !important;
+body.light-theme .modal-qty-input:hover,
+body.light-theme .modal-qty-input:focus {
+  color: #0F172A !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+body.light-theme .modal-close-btn {
+  filter: none !important;
+  opacity: 0.7 !important;
+}
+
+body.light-theme .modal-close-btn:hover {
+  opacity: 1 !important;
 }
