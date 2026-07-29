@@ -107,7 +107,7 @@ tech-identity/
 ## 🔗 6. Liên kết Tài nguyên & Demo
 
 - **Figma Design Link:** [https://www.figma.com/file/placeholder-tech-identity-ui](https://www.figma.com/file/placeholder-tech-identity-ui) *(Xem bản thiết kế Figma High-Fidelity Desktop & Mobile)*
-- **Live Demo Link:** [https://tech-identity-portfolio.vercel.app](https://tech-identity-portfolio.vercel.app) *(Xem bản website thực tế online)*
+- **Live Demo Link (GitHub Pages):** [https://kuncode1311-cloud.github.io/tech-identity/](https://kuncode1311-cloud.github.io/tech-identity/) *(Xem trực tiếp website online trên GitHub Pages)*
 
 ---
 
