@@ -187,14 +187,63 @@
   }
 
   /* Flash Sale Section Mobile Optimization */
+  .flash-sale-box-figma {
+    padding: 1rem !important;
+  }
+
   .flash-sale-title {
-    font-size: 1.35rem !important;
+    font-size: 1.3rem !important;
+    white-space: nowrap !important;
   }
 
   .countdown-box-figma {
-    width: 32px !important;
-    height: 32px !important;
-    font-size: 0.85rem !important;
+    width: 28px !important;
+    height: 28px !important;
+    font-size: 0.8rem !important;
+    padding: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .flash-sale-box-figma .product-card-figma {
+    padding: 0.65rem !important;
+  }
+
+  .flash-sale-box-figma .product-img-box-figma {
+    height: 125px !important;
+  }
+
+  .flash-sale-box-figma .product-card-figma h4 {
+    font-size: 0.825rem !important;
+    line-height: 1.25 !important;
+    min-height: 2.1rem !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+    white-space: normal !important;
+    margin-bottom: 0.35rem !important;
+  }
+
+  .flash-sale-box-figma .price-current {
+    font-size: 0.925rem !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.02em !important;
+  }
+
+  .flash-sale-box-figma .price-old {
+    font-size: 0.725rem !important;
+  }
+
+  .flash-sale-box-figma .badge-orange-figma {
+    font-size: 0.7rem !important;
+    padding: 0.15rem 0.4rem !important;
+  }
+
+  .flash-sale-box-figma .btn-orange-figma {
+    font-size: 0.775rem !important;
+    padding: 0.4rem 0.25rem !important;
   }
 
   .btn-custom {
@@ -233,10 +282,10 @@
   }
 
   .product-card-figma h4 {
-    font-size: 0.825rem !important;
+    font-size: 0.8rem !important;
   }
 
   .price-current {
-    font-size: 1rem !important;
+    font-size: 0.875rem !important;
   }
 }
