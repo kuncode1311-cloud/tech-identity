@@ -3,7 +3,7 @@
 > **Báo cáo đồ án Thiết kế Giao diện Web (Front-end Development)**
 > **Trường:** Viện Đào tạo Quốc tế NIIE — Trường Đại học Nguyễn Tất Thành  
 > **Họ và tên sinh viên:** Trần Vũ Việt Quang  
-> **Mã số sinh viên (MSSV):** [Điền MSSV]  
+> **Mã số sinh viên (MSSV):** 2400002814  
 
 ---
 
