@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Store — Nâng Cấp Trải Nghiệm Công Nghệ | VQ Việt Quang</title>
+  <meta name="description" content="Cửa hàng công nghệ TechStore chuyên cung cấp bàn phím cơ, chuột gaming, tai nghe, màn hình và linh kiện máy tính chính hãng cao cấp.">
+  
+  <!-- Google Fonts: Manrope & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap 5.3 & Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+  
+  <!-- Custom CSS files -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="logo-figma fs-2 mb-2">
+      <div class="logo-icon-box">VQ</div>
+      <div>Việt Quang</div>
+    </div>
+    <div class="text-secondary small fw-medium">Đang tải cửa hàng công nghệ...</div>
+    <div class="loader-bar">
+      <div class="loader-progress"></div>
+    </div>
+  </div>
+
+  <!-- 1. TOP BAR ANNOUNCEMENT (Exact Figma Screenshot 1) -->
+  <div class="top-bar-announcement">
+    🚚 Miễn phí giao hàng cho đơn từ 1.000.000đ &nbsp;|&nbsp; 📦 Bảo hành chính hãng &nbsp;|&nbsp; 🔄 Đổi trả trong 7 ngày
+  </div>
+
+  <!-- 2. HEADER & NAVIGATION (Exact Figma Screenshot 1 Logo & Nav) -->
+  <header class="header-sticky">
+    <div class="container-custom d-flex align-items-center justify-content-between">
+      
+      <!-- Figma Logo VQ Việt Quang -->
+      <a href="index.html" class="logo-figma">
+        <div class="logo-icon-box">VQ</div>
+        <div>Việt Quang</div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="d-none d-lg-flex align-items-center gap-3">
+        <a href="index.html#about" class="nav-link-custom">Giới thiệu</a>
+        <a href="index.html#skills" class="nav-link-custom">Kỹ năng</a>
+        <a href="index.html#projects" class="nav-link-custom">Dự án</a>
+        <a href="shop.html" class="nav-link-custom active text-cyan">Tech Store</a>
+        <a href="index.html#contact" class="nav-link-custom">Liên hệ</a>
+      </nav>
+
+      <!-- Action Buttons & Controls -->
+      <div class="d-flex align-items-center gap-3">
+        <a href="shop.html" class="btn-header-store d-none d-sm-inline-flex">
+          🖥️ Xem cửa hàng
+        </a>
+
+        <button id="themeToggleBtn" class="btn-icon-custom rounded-circle" aria-label="Đổi giao diện" title="Đổi giao diện">
+          <i class="bi bi-sun-fill"></i>
+        </button>
+
+        <a href="product.html" class="cart-btn-wrapper btn-icon-custom rounded-circle" aria-label="Giỏ hàng" title="Giỏ hàng">
+          <i class="bi bi-bag-fill"></i>
+          <span id="cartBadge" class="cart-badge" style="display: none;">0</span>
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="btn-icon-custom d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenuFigma">
+          <i class="bi bi-list fs-4"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Offcanvas Drawer -->
+  <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="mobileMenuFigma" style="background-color: var(--bg-secondary) !important;">
+    <div class="offcanvas-header border-bottom border-secondary border-opacity-25">
+      <div class="logo-figma">
+        <div class="logo-icon-box">VQ</div>
+        <div>Việt Quang</div>
+      </div>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column gap-3 fs-5 pt-4">
+      <a href="index.html" class="nav-link-custom"><i class="bi bi-arrow-left"></i> Portfolio cá nhân</a>
+      <a href="shop.html" class="nav-link-custom active text-cyan">Tech Store</a>
+      <a href="#categories" class="nav-link-custom" data-bs-dismiss="offcanvas">Danh mục sản phẩm</a>
+      <a href="#products-list" class="nav-link-custom" data-bs-dismiss="offcanvas">Sản phẩm nổi bật</a>
+      <a href="#flash-sale" class="nav-link-custom text-orange" data-bs-dismiss="offcanvas">⚡ Flash Sale</a>
+
+      <div class="mt-auto pt-4 border-top border-secondary border-opacity-25">
+        <a href="index.html" class="btn-header-store w-100 justify-content-center">
+          <i class="bi bi-person-circle"></i> Về trang Portfolio
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. HERO SHOP SECTION (Exact Figma Screenshot 1) -->
+  <section class="shop-hero-figma">
+    <div class="container-custom">
+      <div class="row align-items-center gy-4">
+        
+        <!-- Left Content -->
+        <div class="col-lg-6">
+          <div class="badge-blue-figma d-inline-flex mb-3">
+            📍 Bộ sưu tập công nghệ 2026
+          </div>
+
+          <h1 class="mb-3 fw-extrabold" style="font-size: clamp(36px, 4.5vw, 56px); line-height: 1.1;">
+            Thiết bị mạnh mẽ <br>
+            <span class="text-cyan">cho mọi ý tưởng lớn</span>
+          </h1>
+
+          <p class="fs-6 text-secondary mb-4" style="max-width: 520px; line-height: 1.7;">
+            Khám phá bàn phím, chuột, tai nghe và các thiết bị máy tính được lựa chọn dành cho học tập, sáng tạo và giải trí.
+          </p>
+
+          <div class="d-flex flex-wrap gap-3 mb-4">
+            <a href="#products-list" class="btn-orange-figma">
+              🛒 Mua ngay
+            </a>
+            <a href="#categories" class="btn-secondary-figma">
+              Xem sản phẩm ↓
+            </a>
+          </div>
+
+          <div class="d-flex flex-wrap gap-4 text-secondary small pt-2">
+            <span>✅ Bảo hành chính hãng</span>
+            <span>🔄 Đổi trả trong 7 ngày</span>
+            <span>🚚 Giao hàng toàn quốc</span>
+          </div>
+        </div>
+
+        <!-- Right Setup Banner Image with Badges -->
+        <div class="col-lg-6">
+          <div class="hero-setup-box">
+            <span class="overlay-badge-top">🔥 Bán chạy #1</span>
+            <img src="assets/images/banners/shop-hero.png" alt="Tech Setup Hero Visual">
+            
+            <div class="overlay-card-bottom">
+              <div class="fs-2 text-cyan"><i class="bi bi-mouse2-fill"></i></div>
+              <div>
+                <div class="fw-bold text-title small">Logitech G Pro X</div>
+                <div class="text-orange fw-extrabold">2.890.000đ</div>
+                <div class="text-success extra-small" style="font-size:0.75rem;">↓ Giảm 17%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. CATEGORY GRID SECTION (Exact Figma Screenshot 3) -->
+  <section id="categories" class="section-padding pt-0">
+    <div class="container-custom">
+      <h2 class="text-center fw-extrabold mb-4" style="font-size: 2.25rem;">Danh mục sản phẩm</h2>
+
+      <div class="category-grid-figma">
+        <div class="category-card-figma active" data-category="laptop">
+          <div class="icon">💻</div>
+          <div class="name">Laptop</div>
+          <div class="count">24 sản phẩm</div>
+        </div>
+        <div class="category-card-figma" data-category="keyboard">
+          <div class="icon">⌨️</div>
+          <div class="name">Bàn phím</div>
+          <div class="count">38 sản phẩm</div>
+        </div>
+        <div class="category-card-figma" data-category="mouse">
+          <div class="icon">🖱️</div>
+          <div class="name">Chuột</div>
+          <div class="count">42 sản phẩm</div>
+        </div>
+        <div class="category-card-figma" data-category="headset">
+          <div class="icon">🎧</div>
+          <div class="name">Tai nghe</div>
+          <div class="count">31 sản phẩm</div>
+        </div>
+        <div class="category-card-figma" data-category="monitor">
+          <div class="icon">🖥️</div>
+          <div class="name">Màn hình</div>
+          <div class="count">18 sản phẩm</div>
+        </div>
+        <div class="category-card-figma" data-category="ssd">
+          <div class="icon">💾</div>
+          <div class="name">SSD</div>
+          <div class="count">22 sản phẩm</div>
+        </div>
+        <div class="category-card-figma" data-category="ram">
+          <div class="icon">🧮</div>
+          <div class="name">RAM</div>
+          <div class="count">19 sản phẩm</div>
+        </div>
+        <div class="category-card-figma" data-category="cpu">
+          <div class="icon">⚙️</div>
+          <div class="name">CPU</div>
+          <div class="count">15 sản phẩm</div>
+        </div>
+        <div class="category-card-figma" data-category="vga">
+          <div class="icon">🎮</div>
+          <div class="name">VGA</div>
+          <div class="count">16 sản phẩm</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. FEATURED PRODUCTS SECTION (Exact Figma Screenshot 4) -->
+  <section id="products-list" class="section-padding pt-4">
+    <div class="container-custom">
+      <div class="d-flex align-items-center justify-content-between mb-4">
+        <div>
+          <span class="badge-blue-figma mb-2 d-inline-block">⭐ Nổi bật</span>
+          <h2 class="fw-extrabold mb-0" style="font-size: 2.25rem;">Sản phẩm nổi bật</h2>
+        </div>
+        <a href="#products-list" class="btn-secondary-figma">Xem tất cả →</a>
+      </div>
+
+      <div class="row g-4">
+        
+        <!-- Product 1: Keychron K8 Pro -->
+        <div class="col-6 col-lg-3 product-item" data-category="keyboard">
+          <div class="product-card-figma">
+            <div class="product-img-box-figma">
+              <span class="badge-blue-figma position-absolute top-0 start-0 m-2 z-2">Bán chạy</span>
+              <button class="product-fav-btn-figma" onclick="this.classList.toggle('active')" aria-label="Yêu thích"><i class="bi bi-heart"></i></button>
+              <img src="assets/images/products/keychron-k8.png" alt="Keychron K8 Pro">
+            </div>
+            <div class="p-3 d-flex flex-column flex-grow-1">
+              <div class="text-secondary extra-small mb-1" style="font-size:0.8rem;">Bàn phím</div>
+              <h4 class="fs-6 fw-bold mb-1 text-truncate text-title">Bàn phím cơ Keychron K8 Pro</h4>
+              <div class="text-secondary small mb-2 text-truncate" style="font-size:0.825rem;">Switch Gateron Pro, hot-swap, RGB backlight</div>
+              <div class="d-flex align-items-center gap-1 text-warning small mb-3">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                <span class="text-secondary ms-1">4.8 (284)</span>
+              </div>
+              <div class="mt-auto">
+                <div class="mb-3">
+                  <span class="price-current fs-5 fw-extrabold text-orange">2.390.000đ</span>
+                  <span class="price-old small">2.890.000đ</span>
+                </div>
+                <div class="d-flex gap-2">
+                  <button class="btn-orange-figma flex-grow-1 btn-add-to-cart" data-product-name="Keychron K8 Pro">+ Giỏ hàng</button>
+                  <a href="product.html" class="btn-secondary-figma px-3">Chi tiết</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2: Logitech G Pro X Superlight (DETAIL LINK TARGET) -->
+        <div class="col-6 col-lg-3 product-item" data-category="mouse">
+          <div class="product-card-figma border-primary">
+            <div class="product-img-box-figma">
+              <span class="badge-orange-figma position-absolute top-0 start-0 m-2 z-2">-17%</span>
+              <button class="product-fav-btn-figma active" onclick="this.classList.toggle('active')" aria-label="Yêu thích"><i class="bi bi-heart-fill text-danger"></i></button>
+              <img src="assets/images/products/gpro-superlight.png" alt="Logitech G Pro X Superlight">
+            </div>
+            <div class="p-3 d-flex flex-column flex-grow-1">
+              <div class="text-secondary extra-small mb-1" style="font-size:0.8rem;">Chuột</div>
+              <h4 class="fs-6 fw-bold mb-1 text-truncate text-title">Chuột Logitech G Pro X Superlight</h4>
+              <div class="text-secondary small mb-2 text-truncate" style="font-size:0.825rem;">HERO 25K, dưới 63g, Lightspeed</div>
+              <div class="d-flex align-items-center gap-1 text-warning small mb-3">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                <span class="text-secondary ms-1">4.9 (326)</span>
+              </div>
+              <div class="mt-auto">
+                <div class="mb-3">
+                  <span class="price-current fs-5 fw-extrabold text-orange">2.890.000đ</span>
+                  <span class="price-old small">3.490.000đ</span>
+                </div>
+                <div class="d-flex gap-2">
+                  <button class="btn-orange-figma flex-grow-1 btn-add-to-cart" data-product-name="Logitech G Pro X Superlight">+ Giỏ hàng</button>
+                  <a href="product.html" class="btn-secondary-figma px-3 text-cyan border-cyan">Chi tiết</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3: HyperX Cloud III -->
+        <div class="col-6 col-lg-3 product-item" data-category="headset">
+          <div class="product-card-figma">
+            <div class="product-img-box-figma">
+              <span class="badge-blue-figma position-absolute top-0 start-0 m-2 z-2">Mới</span>
+              <button class="product-fav-btn-figma" onclick="this.classList.toggle('active')" aria-label="Yêu thích"><i class="bi bi-heart"></i></button>
+              <img src="assets/images/products/hyperx-cloud.png" alt="HyperX Cloud III">
+            </div>
+            <div class="p-3 d-flex flex-column flex-grow-1">
+              <div class="text-secondary extra-small mb-1" style="font-size:0.8rem;">Tai nghe</div>
+              <h4 class="fs-6 fw-bold mb-1 text-truncate text-title">Tai nghe HyperX Cloud III</h4>
+              <div class="text-secondary small mb-2 text-truncate" style="font-size:0.825rem;">DTS Headphone:X, driver 53mm, giảm ồn</div>
+              <div class="d-flex align-items-center gap-1 text-warning small mb-3">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                <span class="text-secondary ms-1">4.7 (198)</span>
+              </div>
+              <div class="mt-auto">
+                <div class="mb-3">
+                  <span class="price-current fs-5 fw-extrabold text-orange">2.490.000đ</span>
+                  <span class="price-old small">2.990.000đ</span>
+                </div>
+                <div class="d-flex gap-2">
+                  <button class="btn-orange-figma flex-grow-1 btn-add-to-cart" data-product-name="HyperX Cloud III">+ Giỏ hàng</button>
+                  <a href="product.html" class="btn-secondary-figma px-3">Chi tiết</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4: ASUS TUF Gaming 27" -->
+        <div class="col-6 col-lg-3 product-item" data-category="monitor">
+          <div class="product-card-figma">
+            <div class="product-img-box-figma">
+              <span class="badge-orange-figma position-absolute top-0 start-0 m-2 z-2">-18%</span>
+              <button class="product-fav-btn-figma" onclick="this.classList.toggle('active')" aria-label="Yêu thích"><i class="bi bi-heart"></i></button>
+              <img src="assets/images/products/asus-monitor.png" alt="ASUS TUF Gaming 27">
+            </div>
+            <div class="p-3 d-flex flex-column flex-grow-1">
+              <div class="text-secondary extra-small mb-1" style="font-size:0.8rem;">Màn hình</div>
+              <h4 class="fs-6 fw-bold mb-1 text-truncate text-title">Màn hình ASUS TUF Gaming 27"</h4>
+              <div class="text-secondary small mb-2 text-truncate" style="font-size:0.825rem;">165Hz, IPS, 1ms, FreeSync Premium</div>
+              <div class="d-flex align-items-center gap-1 text-warning small mb-3">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                <span class="text-secondary ms-1">4.6 (152)</span>
+              </div>
+              <div class="mt-auto">
+                <div class="mb-3">
+                  <span class="price-current fs-5 fw-extrabold text-orange">6.990.000đ</span>
+                  <span class="price-old small">8.490.000đ</span>
+                </div>
+                <div class="d-flex gap-2">
+                  <button class="btn-orange-figma flex-grow-1 btn-add-to-cart" data-product-name="ASUS TUF Gaming 27">+ Giỏ hàng</button>
+                  <a href="product.html" class="btn-secondary-figma px-3">Chi tiết</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 5: SSD Samsung 990 Pro 1TB -->
+        <div class="col-6 col-lg-3 product-item" data-category="ssd">
+          <div class="product-card-figma">
+            <div class="product-img-box-figma">
+              <span class="badge-blue-figma position-absolute top-0 start-0 m-2 z-2">Bán chạy</span>
+              <button class="product-fav-btn-figma" onclick="this.classList.toggle('active')" aria-label="Yêu thích"><i class="bi bi-heart"></i></button>
+              <img src="assets/images/products/samsung-990pro.png" alt="SSD Samsung 990 Pro 1TB">
+            </div>
+            <div class="p-3 d-flex flex-column flex-grow-1">
+              <div class="text-secondary extra-small mb-1" style="font-size:0.8rem;">SSD</div>
+              <h4 class="fs-6 fw-bold mb-1 text-truncate text-title">SSD Samsung 990 Pro 1TB</h4>
+              <div class="text-secondary small mb-2 text-truncate" style="font-size:0.825rem;">PCIe 4.0, đọc 7.450 MB/s, tản nhiệt</div>
+              <div class="d-flex align-items-center gap-1 text-warning small mb-3">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                <span class="text-secondary ms-1">4.8 (412)</span>
+              </div>
+              <div class="mt-auto">
+                <div class="mb-3">
+                  <span class="price-current fs-5 fw-extrabold text-orange">3.290.000đ</span>
+                  <span class="price-old small">3.890.000đ</span>
+                </div>
+                <div class="d-flex gap-2">
+                  <button class="btn-orange-figma flex-grow-1 btn-add-to-cart" data-product-name="SSD Samsung 990 Pro 1TB">+ Giỏ hàng</button>
+                  <a href="product.html" class="btn-secondary-figma px-3">Chi tiết</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 6: RAM Corsair Vengeance 32GB -->
+        <div class="col-6 col-lg-3 product-item" data-category="ram">
+          <div class="product-card-figma">
+            <div class="product-img-box-figma">
+              <span class="badge-orange-figma position-absolute top-0 start-0 m-2 z-2">-15%</span>
+              <button class="product-fav-btn-figma" onclick="this.classList.toggle('active')" aria-label="Yêu thích"><i class="bi bi-heart"></i></button>
+              <img src="assets/images/products/corsair-ram.png" alt="RAM Corsair Vengeance 32GB">
+            </div>
+            <div class="p-3 d-flex flex-column flex-grow-1">
+              <div class="text-secondary extra-small mb-1" style="font-size:0.8rem;">RAM</div>
+              <h4 class="fs-6 fw-bold mb-1 text-truncate text-title">RAM Corsair Vengeance 32GB</h4>
+              <div class="text-secondary small mb-2 text-truncate" style="font-size:0.825rem;">DDR5 6000MHz, RGB, XMP 3.0</div>
+              <div class="d-flex align-items-center gap-1 text-warning small mb-3">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                <span class="text-secondary ms-1">4.7 (231)</span>
+              </div>
+              <div class="mt-auto">
+                <div class="mb-3">
+                  <span class="price-current fs-5 fw-extrabold text-orange">2.790.000đ</span>
+                  <span class="price-old small">3.290.000đ</span>
+                </div>
+                <div class="d-flex gap-2">
+                  <button class="btn-orange-figma flex-grow-1 btn-add-to-cart" data-product-name="RAM Corsair Vengeance 32GB">+ Giỏ hàng</button>
+                  <a href="product.html" class="btn-secondary-figma px-3">Chi tiết</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 7: Laptop ASUS ROG Zephyrus G14 -->
+        <div class="col-6 col-lg-3 product-item" data-category="laptop">
+          <div class="product-card-figma">
+            <div class="product-img-box-figma">
+              <span class="badge-blue-figma position-absolute top-0 start-0 m-2 z-2">Mới</span>
+              <button class="product-fav-btn-figma" onclick="this.classList.toggle('active')" aria-label="Yêu thích"><i class="bi bi-heart"></i></button>
+              <img src="assets/images/products/asus-zephyrus.png" alt="Laptop ASUS ROG Zephyrus G14">
+            </div>
+            <div class="p-3 d-flex flex-column flex-grow-1">
+              <div class="text-secondary extra-small mb-1" style="font-size:0.8rem;">Laptop</div>
+              <h4 class="fs-6 fw-bold mb-1 text-truncate text-title">Laptop ASUS ROG Zephyrus G14</h4>
+              <div class="text-secondary small mb-2 text-truncate" style="font-size:0.825rem;">Ryzen 9, RTX 4070, 16GB RAM, 1TB</div>
+              <div class="d-flex align-items-center gap-1 text-warning small mb-3">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                <span class="text-secondary ms-1">4.9 (87)</span>
+              </div>
+              <div class="mt-auto">
+                <div class="mb-3">
+                  <span class="price-current fs-5 fw-extrabold text-orange">42.990.000đ</span>
+                  <span class="price-old small">48.990.000đ</span>
+                </div>
+                <div class="d-flex gap-2">
+                  <button class="btn-orange-figma flex-grow-1 btn-add-to-cart" data-product-name="Laptop ASUS ROG Zephyrus G14">+ Giỏ hàng</button>
+                  <a href="product.html" class="btn-secondary-figma px-3">Chi tiết</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 8: Card đồ họa ASUS RTX 4070 -->
+        <div class="col-6 col-lg-3 product-item" data-category="vga">
+          <div class="product-card-figma">
+            <div class="product-img-box-figma">
+              <span class="badge-orange-figma position-absolute top-0 start-0 m-2 z-2">-15%</span>
+              <button class="product-fav-btn-figma" onclick="this.classList.toggle('active')" aria-label="Yêu thích"><i class="bi bi-heart"></i></button>
+              <img src="assets/images/products/asus-rtx4070.png" alt="Card đồ họa ASUS RTX 4070">
+            </div>
+            <div class="p-3 d-flex flex-column flex-grow-1">
+              <div class="text-secondary extra-small mb-1" style="font-size:0.8rem;">VGA</div>
+              <h4 class="fs-6 fw-bold mb-1 text-truncate text-title">Card đồ họa ASUS RTX 4070</h4>
+              <div class="text-secondary small mb-2 text-truncate" style="font-size:0.825rem;">12GB GDDR6X, DLSS 3, 4K gaming</div>
+              <div class="d-flex align-items-center gap-1 text-warning small mb-3">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                <span class="text-secondary ms-1">4.8 (145)</span>
+              </div>
+              <div class="mt-auto">
+                <div class="mb-3">
+                  <span class="price-current fs-5 fw-extrabold text-orange">18.990.000đ</span>
+                  <span class="price-old small">22.490.000đ</span>
+                </div>
+                <div class="d-flex gap-2">
+                  <button class="btn-orange-figma flex-grow-1 btn-add-to-cart" data-product-name="Card đồ họa ASUS RTX 4070">+ Giỏ hàng</button>
+                  <a href="product.html" class="btn-secondary-figma px-3">Chi tiết</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. FLASH SALE SECTION (Exact Figma Screenshot 5) -->
+  <section id="flash-sale" class="section-padding pt-0">
+    <div class="container-custom">
+      <div class="flash-sale-box-figma">
+        
+        <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4">
+          <div class="d-flex align-items-center gap-3">
+            <div class="flash-sale-title">
+              ⚡ Flash Sale
+            </div>
+            <div class="d-flex align-items-center gap-1">
+              <div id="timerHours" class="countdown-box-figma">05</div>
+              <span class="fw-bold text-orange">:</span>
+              <div id="timerMinutes" class="countdown-box-figma">38</div>
+              <span class="fw-bold text-orange">:</span>
+              <div id="timerSeconds" class="countdown-box-figma">18</div>
+            </div>
+          </div>
+
+          <button class="btn-orange-figma">Xem tất cả ưu đãi →</button>
+        </div>
+
+        <div class="row g-4">
+          
+          <div class="col-6 col-lg-3">
+            <div class="product-card-figma p-3">
+              <div class="product-img-box-figma mb-3" style="height: 150px; border-radius: 12px;">
+                <img src="assets/images/products/keychron-k8.png" alt="Keychron K8 Pro">
+              </div>
+              <div class="fw-bold text-title mb-1 text-truncate">Keychron K8 Pro</div>
+              <div class="mb-2">
+                <span class="fs-5 fw-extrabold text-orange">1.990.000đ</span>
+                <span class="price-old small">2.890.000đ</span>
+              </div>
+              <div class="badge-orange-figma d-inline-block mb-3">-31%</div>
+              <div class="d-flex justify-content-between extra-small text-secondary mb-1" style="font-size:0.75rem;">
+                <span>Đã bán: 78</span>
+                <span>Còn: 22</span>
+              </div>
+              <div class="progress-custom mb-3">
+                <div class="progress-bar-custom bg-warning" style="width: 78%;"></div>
+              </div>
+              <button class="btn-orange-figma w-100 btn-add-to-cart" data-product-name="Keychron K8 Pro">Mua ngay</button>
+            </div>
+          </div>
+
+          <div class="col-6 col-lg-3">
+            <div class="product-card-figma p-3">
+              <div class="product-img-box-figma mb-3" style="height: 150px; border-radius: 12px;">
+                <img src="assets/images/products/hyperx-cloud.png" alt="HyperX Cloud III">
+              </div>
+              <div class="fw-bold text-title mb-1 text-truncate">HyperX Cloud III</div>
+              <div class="mb-2">
+                <span class="fs-5 fw-extrabold text-orange">2.190.000đ</span>
+                <span class="price-old small">2.990.000đ</span>
+              </div>
+              <div class="badge-orange-figma d-inline-block mb-3">-27%</div>
+              <div class="d-flex justify-content-between extra-small text-secondary mb-1" style="font-size:0.75rem;">
+                <span>Đã bán: 55</span>
+                <span>Còn: 25</span>
+              </div>
+              <div class="progress-custom mb-3">
+                <div class="progress-bar-custom bg-warning" style="width: 68%;"></div>
+              </div>
+              <button class="btn-orange-figma w-100 btn-add-to-cart" data-product-name="HyperX Cloud III">Mua ngay</button>
+            </div>
+          </div>
+
+          <div class="col-6 col-lg-3">
+            <div class="product-card-figma p-3">
+              <div class="product-img-box-figma mb-3" style="height: 150px; border-radius: 12px;">
+                <img src="assets/images/products/samsung-990pro.png" alt="Samsung 990 Pro">
+              </div>
+              <div class="fw-bold text-title mb-1 text-truncate">Samsung 990 Pro</div>
+              <div class="mb-2">
+                <span class="fs-5 fw-extrabold text-orange">2.790.000đ</span>
+                <span class="price-old small">3.890.000đ</span>
+              </div>
+              <div class="badge-orange-figma d-inline-block mb-3">-28%</div>
+              <div class="d-flex justify-content-between extra-small text-secondary mb-1" style="font-size:0.75rem;">
+                <span>Đã bán: 63</span>
+                <span>Còn: 37</span>
+              </div>
+              <div class="progress-custom mb-3">
+                <div class="progress-bar-custom bg-warning" style="width: 63%;"></div>
+              </div>
+              <button class="btn-orange-figma w-100 btn-add-to-cart" data-product-name="Samsung 990 Pro">Mua ngay</button>
+            </div>
+          </div>
+
+          <div class="col-6 col-lg-3">
+            <div class="product-card-figma p-3">
+              <div class="product-img-box-figma mb-3" style="height: 150px; border-radius: 12px;">
+                <img src="assets/images/products/corsair-ram.png" alt="Corsair Vengeance">
+              </div>
+              <div class="fw-bold text-title mb-1 text-truncate">Corsair Vengeance</div>
+              <div class="mb-2">
+                <span class="fs-5 fw-extrabold text-orange">2.390.000đ</span>
+                <span class="price-old small">3.290.000đ</span>
+              </div>
+              <div class="badge-orange-figma d-inline-block mb-3">-27%</div>
+              <div class="d-flex justify-content-between extra-small text-secondary mb-1" style="font-size:0.75rem;">
+                <span>Đã bán: 40</span>
+                <span>Còn: 20</span>
+              </div>
+              <div class="progress-custom mb-3">
+                <div class="progress-bar-custom bg-warning" style="width: 66%;"></div>
+              </div>
+              <button class="btn-orange-figma w-100 btn-add-to-cart" data-product-name="Corsair Vengeance">Mua ngay</button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. SPOTLIGHT BANNER SECTION (Exact Figma Screenshot New 1) -->
+  <section class="section-padding pt-0">
+    <div class="container-custom">
+      <div class="spotlight-banner-figma">
+        <div class="spotlight-content" style="max-width: 620px;">
+          <div class="text-cyan small fw-bold mb-2" style="letter-spacing: 0.12em;">LOGITECH</div>
+          <h2 class="fs-1 fw-extrabold text-title mb-4" style="line-height: 1.15;">
+            G Pro X Superlight — <br>
+            <span class="text-cyan">Nhẹ hơn, nhanh hơn,</span> chuẩn xác hơn
+          </h2>
+          
+          <div class="row g-3 mb-4">
+            <div class="col-6">
+              <div class="feature-pill-figma">⚖️ Dưới 63g siêu nhẹ</div>
+            </div>
+            <div class="col-6">
+              <div class="feature-pill-figma">🎯 Cảm biến HERO 25K</div>
+            </div>
+            <div class="col-6">
+              <div class="feature-pill-figma">⚡ Lightspeed không dây</div>
+            </div>
+            <div class="col-6">
+              <div class="feature-pill-figma">🔋 Pin lên đến 70 giờ</div>
+            </div>
+          </div>
+
+          <a href="product.html" class="btn-header-store py-3 px-4 fs-6">
+            Khám phá sản phẩm →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. BRAND LOGOS ROW (Exact Figma Screenshot New 2) -->
+  <section class="section-padding pt-0">
+    <div class="container-custom text-center">
+      <div class="text-secondary small fw-bold mb-3" style="letter-spacing: 0.12em;">THƯƠNG HIỆU CHÍNH HÃNG</div>
+      <div class="brands-bar-figma">
+        <div>ASUS</div>
+        <div>Logitech</div>
+        <div>Keychron</div>
+        <div>Samsung</div>
+        <div>Corsair</div>
+        <div>HyperX</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. WHY CHOOSE TECHGEAR (Exact Figma Screenshot New 2) -->
+  <section class="section-padding pt-0">
+    <div class="container-custom">
+      <div class="text-center mb-5">
+        <span class="badge-blue-figma mb-2 d-inline-block">💎 Cam kết</span>
+        <h2 class="fw-extrabold" style="font-size: 2.25rem;">Vì sao chọn TechGear?</h2>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="card-glass text-center h-100">
+            <div class="icon-square-figma"><i class="bi bi-check-lg"></i></div>
+            <h4 class="fs-5 fw-bold mb-2 text-title">Hàng chính hãng</h4>
+            <p class="small text-secondary mb-0">Cam kết 100% sản phẩm có nguồn gốc rõ ràng và bảo hành toàn quốc.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card-glass text-center h-100">
+            <div class="icon-square-figma"><i class="bi bi-shield-check"></i></div>
+            <h4 class="fs-5 fw-bold mb-2 text-title">Bảo hành uy tín</h4>
+            <p class="small text-secondary mb-0">Bảo hành 1 đổi 1 nhanh chóng theo tiêu chuẩn nhà sản xuất.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card-glass text-center h-100">
+            <div class="icon-square-figma"><i class="bi bi-rocket-takeoff-fill"></i></div>
+            <h4 class="fs-5 fw-bold mb-2 text-title">Giao hàng nhanh</h4>
+            <p class="small text-secondary mb-0">Giao hàng hỏa tốc trong nội thành và giao hàng toàn quốc.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card-glass text-center h-100">
+            <div class="icon-square-figma"><i class="bi bi-chat-dots-fill"></i></div>
+            <h4 class="fs-5 fw-bold mb-2 text-title">Hỗ trợ tận tâm</h4>
+            <p class="small text-secondary mb-0">Đội ngũ kỹ thuật tư vấn giải đáp 24/7 nhiệt tình nhất.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. REVIEWS SECTION (Exact Figma Screenshot New 3) -->
+  <section id="reviews" class="section-padding pt-0">
+    <div class="container-custom">
+      <div class="text-center mb-5">
+        <span class="badge-blue-figma mb-2 d-inline-block">⭐ Đánh giá</span>
+        <h2 class="fw-extrabold" style="font-size: 2.25rem;">Khách hàng nói gì?</h2>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card-glass h-100 d-flex flex-column">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+              <div class="d-flex align-items-center gap-3">
+                <div class="avatar-circle-figma bg-primary text-white fw-bold">👨‍💻</div>
+                <div>
+                  <div class="fw-bold text-title">Nguyễn Minh Trí</div>
+                  <div class="extra-small text-secondary" style="font-size:0.75rem;">15/07/2026</div>
+                </div>
+              </div>
+              <div class="text-warning small"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+            </div>
+            <p class="small text-secondary mb-4 flex-grow-1" style="line-height: 1.6;">
+              "Chuột quá nhẹ và chính xác. Dùng cho cả gaming lẫn công việc đều cực kỳ ổn. Giao hàng nhanh, đóng gói cẩn thận. Sẽ tiếp tục ủng hộ TechGear!"
+            </p>
+            <div class="product-tag-pill-figma">
+              🖱️ Logitech G Pro X Superlight
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card-glass h-100 d-flex flex-column">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+              <div class="d-flex align-items-center gap-3">
+                <div class="avatar-circle-figma bg-cyan text-dark fw-bold">👩‍🎨</div>
+                <div>
+                  <div class="fw-bold text-title">Trần Thị Lan Anh</div>
+                  <div class="extra-small text-secondary" style="font-size:0.75rem;">22/07/2026</div>
+                </div>
+              </div>
+              <div class="text-warning small"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+            </div>
+            <p class="small text-secondary mb-4 flex-grow-1" style="line-height: 1.6;">
+              "Màn hình đẹp, màu sắc rất trung thực. Mua về để thiết kế đồ họa, tần số quét 165Hz cực kỳ mượt. Rất hài lòng với chất lượng sản phẩm."
+            </p>
+            <div class="product-tag-pill-figma">
+              🖥️ Màn hình ASUS TUF 27"
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card-glass h-100 d-flex flex-column">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+              <div class="d-flex align-items-center gap-3">
+                <div class="avatar-circle-figma bg-purple text-white fw-bold">👨‍🎓</div>
+                <div>
+                  <div class="fw-bold text-title">Lê Hoàng Phúc</div>
+                  <div class="extra-small text-secondary" style="font-size:0.75rem;">18/07/2026</div>
+                </div>
+              </div>
+              <div class="text-warning small"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+            </div>
+            <p class="small text-secondary mb-4 flex-grow-1" style="line-height: 1.6;">
+              "Bàn phím gõ rất sướng tay, âm thanh switch Gateron đỉnh. Kết nối Bluetooth ổn định. Nhìn chung rất tốt!"
+            </p>
+            <div class="product-tag-pill-figma">
+              ⌨️ Keychron K8 Pro
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. FOOTER (Exact Figma Screenshot New 4 Alignment) -->
+  <footer class="footer-figma">
+    <div class="container-custom">
+      
+      <div class="row gy-4 mb-5">
+        <div class="col-lg-4">
+          <div class="logo-figma mb-3">
+            <div class="logo-icon-box">VQ</div>
+            <div>Việt Quang</div>
+          </div>
+          <p class="text-secondary small me-lg-4" style="line-height: 1.7;">
+            Sinh viên Công nghệ thông tin, Front-end Developer và UI/UX Designer yêu thích tạo ra những sản phẩm đẹp và trực quan.
+          </p>
+          <div class="d-flex gap-2 mt-3">
+            <a href="https://github.com" target="_blank" class="btn-icon-custom">⟨⟩</a>
+            <a href="https://linkedin.com" target="_blank" class="btn-icon-custom">in</a>
+            <a href="https://www.facebook.com/tunnee06?locale=vi_VN" target="_blank" class="btn-icon-custom">f</a>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h5 class="fs-6 fw-bold mb-3 text-title" style="letter-spacing: 0.08em; font-size: 0.85rem;">PORTFOLIO</h5>
+          <ul class="list-unstyled text-secondary small d-flex flex-column gap-2">
+            <li><a href="index.html#about">Giới thiệu</a></li>
+            <li><a href="index.html#skills">Kỹ năng</a></li>
+            <li><a href="index.html#projects">Dự án</a></li>
+            <li><a href="index.html#about">Học vấn</a></li>
+            <li><a href="index.html#contact">Liên hệ</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <h5 class="fs-6 fw-bold mb-3 text-title" style="letter-spacing: 0.08em; font-size: 0.85rem;">TECHGEAR STORE</h5>
+          <ul class="list-unstyled text-secondary small d-flex flex-column gap-2">
+            <li><a href="#categories">Laptop</a></li>
+            <li><a href="#categories">Bàn phím</a></li>
+            <li><a href="#categories">Chuột</a></li>
+            <li><a href="#categories">Tai nghe</a></li>
+            <li><a href="#categories">Màn hình</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <h5 class="fs-6 fw-bold mb-3 text-title" style="letter-spacing: 0.08em; font-size: 0.85rem;">HỖ TRỢ</h5>
+          <ul class="list-unstyled text-secondary small d-flex flex-column gap-2">
+            <li><a href="#">Chính sách đổi trả</a></li>
+            <li><a href="#">Bảo hành</a></li>
+            <li><a href="#">Giao hàng</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Floating Contact Bar in Footer -->
+      <div class="footer-contact-bar-figma mb-4">
+        <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
+          <div class="d-flex flex-wrap align-items-center gap-4">
+            <div class="d-flex align-items-center gap-2">
+              <span class="text-cyan fs-5">📧</span>
+              <div>
+                <div class="extra-small text-secondary" style="font-size:0.75rem;">Email</div>
+                <div class="fw-bold text-title small">2400002814@nttu.edu.vn</div>
+              </div>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <span class="text-cyan fs-5">📱</span>
+              <div>
+                <div class="extra-small text-secondary" style="font-size:0.75rem;">Điện thoại</div>
+                <div class="fw-bold text-title small">098 765 4321</div>
+              </div>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <span class="text-cyan fs-5">📍</span>
+              <div>
+                <div class="extra-small text-secondary" style="font-size:0.75rem;">Địa chỉ</div>
+                <div class="fw-bold text-title small">TP. Hồ Chí Minh, Việt Nam</div>
+              </div>
+            </div>
+          </div>
+
+          <a href="index.html#contact" class="btn-header-store">
+            ✉️ Liên hệ ngay
+          </a>
+        </div>
+      </div>
+
+      <!-- Bottom Copyright bar -->
+      <div class="border-top border-secondary border-opacity-25 pt-3 d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2 small text-secondary">
+        <div>© 2026 Trần Vũ Việt Quang. Thiết kế với niềm đam mê công nghệ. 💙</div>
+        <div class="d-flex gap-3">
+          <a href="#" class="text-secondary">Điều khoản sử dụng</a>
+          <a href="#" class="text-secondary">Chính sách bảo mật</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Back To Top Floating Button -->
+  <button id="backToTop" class="back-to-top" aria-label="Lên đầu trang"><i class="bi bi-arrow-up-short fs-3"></i></button>
+
+  <!-- Quick View Product Detail Modal -->
+  <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content text-bg-dark border-secondary border-opacity-25" style="background-color: var(--surface) !important; border-radius: 24px; overflow: hidden; box-shadow: var(--shadow-lg);">
+        <div class="modal-header border-bottom border-secondary border-opacity-25 p-4">
+          <div class="d-flex align-items-center gap-2">
+            <span id="modalCategoryBadge" class="badge-blue-figma">Thiết bị</span>
+            <h5 class="modal-title fw-bold mb-0 text-title" id="productModalLabel">Chi tiết sản phẩm</h5>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div class="row g-4 align-items-center">
+            <div class="col-md-5 text-center">
+              <div class="p-3 rounded-4 bg-black bg-opacity-25 border border-secondary border-opacity-25">
+                <img id="modalProductImg" src="assets/images/products/gpro-superlight.png" alt="Product Image" class="img-fluid rounded-3" style="max-height: 260px; object-fit: contain;">
+              </div>
+            </div>
+            <div class="col-md-7">
+              <div class="text-cyan small fw-bold mb-1" id="modalBrand">TECHGEAR STORE</div>
+              <h3 id="modalProductName" class="fs-4 fw-extrabold text-title mb-2">Chuột Logitech G Pro X Superlight</h3>
+              <div class="d-flex align-items-center gap-2 mb-3">
+                <div class="text-warning small"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                <span id="modalRating" class="small text-secondary">4.9 (326 đánh giá)</span>
+              </div>
+              <div class="mb-3">
+                <span id="modalPriceCurrent" class="fs-3 fw-extrabold text-orange">2.890.000đ</span>
+                <span id="modalPriceOld" class="price-old ms-2 fs-6">3.490.000đ</span>
+              </div>
+              <p id="modalDescription" class="small text-secondary mb-4" style="line-height: 1.6;">
+                Sản phẩm công nghệ cao cấp chính hãng, thiết kế tối ưu hiệu năng và trải nghiệm người dùng.
+              </p>
+
+              <div class="d-flex align-items-center gap-3">
+                <div class="d-flex align-items-center border border-secondary border-opacity-50 rounded-3 overflow-hidden">
+                  <button class="btn btn-sm text-white px-3" onclick="let q=document.getElementById('modalQty'); if(q.value>1) q.value--;">-</button>
+                  <input type="number" id="modalQty" value="1" min="1" max="10" class="form-control form-control-sm text-center border-0 text-white bg-transparent" style="width: 45px; font-weight:700;">
+                  <button class="btn btn-sm text-white px-3" onclick="let q=document.getElementById('modalQty'); q.value++;">+</button>
+                </div>
+
+                <button id="modalAddToCartBtn" class="btn-orange-figma flex-grow-1 py-2 fs-6">
+                  🛒 Thêm vào giỏ hàng
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

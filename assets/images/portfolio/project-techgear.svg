@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D1B2A"/>
+      <stop offset="100%" stop-color="#07111F"/>
+    </linearGradient>
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F97316"/>
+      <stop offset="100%" stop-color="#FB923C"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#22D3EE"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#122235"/>
+      <stop offset="100%" stop-color="#172A40"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="800" height="500" rx="20" fill="url(#bgGrad)"/>
+
+  <!-- Browser Window Frame -->
+  <g transform="translate(40, 30)">
+    <rect width="720" height="440" rx="16" fill="#122235" stroke="rgba(249, 115, 22, 0.3)" stroke-width="2"/>
+    <rect width="720" height="44" rx="16" fill="#0D1B2A"/>
+    <rect y="30" width="720" height="14" fill="#0D1B2A"/>
+    <line x1="0" y1="44" x2="720" y2="44" stroke="rgba(148, 163, 184, 0.2)" stroke-width="1"/>
+
+    <!-- Window Controls -->
+    <circle cx="24" cy="22" r="6" fill="#EF4444"/>
+    <circle cx="44" cy="22" r="6" fill="#F59E0B"/>
+    <circle cx="64" cy="22" r="6" fill="#10B981"/>
+
+    <rect x="100" y="10" width="320" height="24" rx="6" fill="rgba(255,255,255,0.06)"/>
+    <text x="115" y="26" font-family="sans-serif" font-size="12" fill="#94A3B8">techgear.store/shop</text>
+
+    <!-- Top Announcement Bar -->
+    <rect x="0" y="44" width="720" height="22" fill="url(#cyanGrad)"/>
+    <text x="240" y="59" font-family="sans-serif" font-size="11" font-weight="700" fill="#FFF">🚚 Miễn phí giao hàng cho đơn từ 1.000.000đ</text>
+
+    <!-- Header Navigation -->
+    <rect x="30" y="78" width="32" height="32" rx="8" fill="#F97316"/>
+    <text x="38" y="99" font-family="Manrope, sans-serif" font-weight="900" font-size="14" fill="#FFF">TG</text>
+    <text x="72" y="99" font-family="Manrope, sans-serif" font-weight="800" font-size="15" fill="#F8FAFC">TechGear Store</text>
+
+    <rect x="490" y="82" width="75" height="24" rx="12" fill="url(#orangeGrad)"/>
+    <text x="502" y="98" font-family="sans-serif" font-size="11" font-weight="800" fill="#FFF">🛒 Cart (3)</text>
+
+    <!-- Shop Hero Banner Preview -->
+    <rect x="30" y="122" width="660" height="135" rx="16" fill="url(#cardGrad)" stroke="rgba(148, 163, 184, 0.2)"/>
+    <rect x="45" y="137" width="110" height="20" rx="10" fill="rgba(34, 211, 238, 0.15)"/>
+    <text x="55" y="151" font-family="sans-serif" font-size="10" font-weight="700" fill="#22D3EE">📍 Cửa hàng 2026</text>
+
+    <text x="45" y="182" font-family="Manrope, sans-serif" font-size="20" font-weight="900" fill="#F8FAFC">Thiết bị mạnh mẽ cho mọi ý tưởng lớn</text>
+    <text x="45" y="202" font-family="sans-serif" font-size="12" fill="#94A3B8">Khám phá bàn phím cơ, chuột gaming, tai nghe studio cao cấp.</text>
+
+    <rect x="45" y="215" width="105" height="30" rx="8" fill="url(#orangeGrad)"/>
+    <text x="62" y="234" font-family="sans-serif" font-size="11" font-weight="800" fill="#FFF">Mua ngay →</text>
+
+    <!-- 4 Product Grid Cards Mockup -->
+    <g transform="translate(30, 272)">
+      <!-- Card 1 -->
+      <rect x="0" y="0" width="150" height="135" rx="12" fill="#0D1B2A" stroke="rgba(148,163,184,0.2)"/>
+      <rect x="10" y="10" width="130" height="60" rx="8" fill="rgba(255,255,255,0.04)"/>
+      <text x="65" y="45" font-size="24">⌨️</text>
+      <text x="12" y="85" font-family="sans-serif" font-size="11" font-weight="700" fill="#F8FAFC">Keychron K8 Pro</text>
+      <text x="12" y="102" font-family="sans-serif" font-size="12" font-weight="800" fill="#F97316">2.390.000đ</text>
+      <rect x="12" y="110" width="126" height="18" rx="6" fill="url(#orangeGrad)"/>
+      <text x="50" y="123" font-family="sans-serif" font-size="10" font-weight="800" fill="#FFF">+ Giỏ hàng</text>
+
+      <!-- Card 2 -->
+      <rect x="170" y="0" width="150" height="135" rx="12" fill="#0D1B2A" stroke="rgba(59,130,246,0.4)"/>
+      <rect x="180" y="10" width="130" height="60" rx="8" fill="rgba(255,255,255,0.04)"/>
+      <text x="235" y="45" font-size="24">🖱️</text>
+      <text x="182" y="85" font-family="sans-serif" font-size="11" font-weight="700" fill="#F8FAFC">Logitech G Pro X</text>
+      <text x="182" y="102" font-family="sans-serif" font-size="12" font-weight="800" fill="#F97316">2.890.000đ</text>
+      <rect x="182" y="110" width="126" height="18" rx="6" fill="url(#orangeGrad)"/>
+      <text x="220" y="123" font-family="sans-serif" font-size="10" font-weight="800" fill="#FFF">+ Giỏ hàng</text>
+
+      <!-- Card 3 -->
+      <rect x="340" y="0" width="150" height="135" rx="12" fill="#0D1B2A" stroke="rgba(148,163,184,0.2)"/>
+      <rect x="350" y="10" width="130" height="60" rx="8" fill="rgba(255,255,255,0.04)"/>
+      <text x="405" y="45" font-size="24">🎧</text>
+      <text x="352" y="85" font-family="sans-serif" font-size="11" font-weight="700" fill="#F8FAFC">HyperX Cloud III</text>
+      <text x="352" y="102" font-family="sans-serif" font-size="12" font-weight="800" fill="#F97316">2.490.000đ</text>
+      <rect x="352" y="110" width="126" height="18" rx="6" fill="url(#orangeGrad)"/>
+      <text x="390" y="123" font-family="sans-serif" font-size="10" font-weight="800" fill="#FFF">+ Giỏ hàng</text>
+
+      <!-- Card 4 -->
+      <rect x="510" y="0" width="150" height="135" rx="12" fill="#0D1B2A" stroke="rgba(148,163,184,0.2)"/>
+      <rect x="520" y="10" width="130" height="60" rx="8" fill="rgba(255,255,255,0.04)"/>
+      <text x="575" y="45" font-size="24">🖥️</text>
+      <text x="522" y="85" font-family="sans-serif" font-size="11" font-weight="700" fill="#F8FAFC">ASUS TUF 27"</text>
+      <text x="522" y="102" font-family="sans-serif" font-size="12" font-weight="800" fill="#F97316">6.990.000đ</text>
+      <rect x="522" y="110" width="126" height="18" rx="6" fill="url(#orangeGrad)"/>
+      <text x="560" y="123" font-family="sans-serif" font-size="10" font-weight="800" fill="#FFF">+ Giỏ hàng</text>
+    </g>
+
+  </g>
+</svg>

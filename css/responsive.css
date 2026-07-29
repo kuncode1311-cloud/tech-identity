@@ -1,0 +1,171 @@
+/* ==========================================================================
+   Tech Identity — Personal Portfolio & TechGear Store
+   Responsive Media Queries Stylesheet (responsive.css)
+   Breakpoints: 1400px, 1200px, 992px, 768px, 576px, 390px
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. DESKTOP & LARGE SCREENS (<= 1400px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1400px) {
+  h1 { font-size: 3.75rem; }
+  h2 { font-size: 2.5rem; }
+}
+
+/* --------------------------------------------------------------------------
+   2. LAPTOPS & TABLETS LANDSCAPE (<= 1200px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1200px) {
+  h1 { font-size: 3.25rem; }
+  h2 { font-size: 2.25rem; }
+  
+  .floating-skill-tag {
+    display: none; /* Hide floating tags on smaller screens to avoid overflow */
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. TABLETS PORTRAIT (<= 992px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 992px) {
+  h1 { font-size: 2.75rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.35rem; }
+
+  .section-padding {
+    padding: 4.5rem 0;
+  }
+
+  /* Bento Grid Mobile Layout */
+  .bento-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .bento-main, .bento-side-1, .bento-sub-1, .bento-sub-2, .bento-sub-3 {
+    grid-column: span 12;
+  }
+
+  /* Timeline Mobile Layout */
+  .timeline-container::before {
+    left: 20px;
+  }
+
+  .timeline-item {
+    width: 100% !important;
+    padding-left: 3.5rem !important;
+    padding-right: 0 !important;
+    text-align: left !important;
+  }
+
+  .timeline-dot {
+    left: 12px !important;
+    right: auto !important;
+  }
+
+  /* Hero Mobile Layout */
+  .hero-section {
+    padding-top: 5rem;
+    min-height: auto;
+    text-align: center;
+  }
+
+  .hero-stats-bar {
+    margin-top: 2.5rem;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .btn-wrapper-hero {
+    justify-content: center;
+  }
+
+  /* Tech Bridge Section */
+  .tech-bridge-card {
+    padding: 2rem 1.5rem;
+    text-align: center;
+  }
+
+  /* Product Detail Gallery */
+  .product-gallery-main {
+    height: 320px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   4. PHABLETS & MOBILE LANDSCAPE (<= 768px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  h1 { font-size: 2.4rem; }
+  h2 { font-size: 1.75rem; }
+  body { font-size: 15px; }
+
+  /* Offcanvas Menu & Drawer Styling */
+  .header-sticky {
+    padding: 0.8rem 0;
+  }
+
+  .flash-sale-box {
+    padding: 1.5rem;
+  }
+
+  .nav-tabs-custom {
+    overflow-x: auto;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+  }
+
+  .table-responsive-custom {
+    overflow-x: auto;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   5. MOBILE PORTRAIT (<= 576px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 576px) {
+  h1 { font-size: 2.1rem; }
+  h2 { font-size: 1.5rem; }
+
+  .container-custom {
+    padding: 0 1rem;
+  }
+
+  .btn-custom {
+    width: 100%;
+  }
+
+  .hero-stats-bar .row {
+    row-gap: 1.25rem;
+  }
+
+  .stat-number {
+    font-size: 1.75rem;
+  }
+
+  .toast-container-custom {
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+  }
+
+  .toast-custom {
+    min-width: auto;
+    width: 100%;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   6. SMALL MOBILE SCREENS (<= 390px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 390px) {
+  h1 { font-size: 1.85rem; }
+  h2 { font-size: 1.35rem; }
+  
+  .card-glass {
+    padding: 1.25rem;
+  }
+}

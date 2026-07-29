@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B1728"/>
+      <stop offset="100%" stop-color="#122235"/>
+    </linearGradient>
+    <linearGradient id="calcDisplay" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07111F"/>
+      <stop offset="100%" stop-color="#0D1B2A"/>
+    </linearGradient>
+    <linearGradient id="btnGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F97316"/>
+      <stop offset="100%" stop-color="#FB923C"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#22D3EE"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" rx="20" fill="url(#bgGrad)"/>
+
+  <!-- Browser Window Frame -->
+  <g transform="translate(40, 30)">
+    <rect width="720" height="440" rx="16" fill="#122235" stroke="rgba(34, 211, 238, 0.3)" stroke-width="2"/>
+    <rect width="720" height="44" rx="16" fill="#0D1B2A"/>
+    <rect y="30" width="720" height="14" fill="#0D1B2A"/>
+    <line x1="0" y1="44" x2="720" y2="44" stroke="rgba(148, 163, 184, 0.2)" stroke-width="1"/>
+
+    <circle cx="24" cy="22" r="6" fill="#EF4444"/>
+    <circle cx="44" cy="22" r="6" fill="#F59E0B"/>
+    <circle cx="64" cy="22" r="6" fill="#10B981"/>
+
+    <rect x="100" y="10" width="320" height="24" rx="6" fill="rgba(255,255,255,0.06)"/>
+    <text x="115" y="26" font-family="sans-serif" font-size="12" fill="#94A3B8">smart-calculator.app</text>
+
+    <!-- Calculator App Centered Showcase -->
+    <g transform="translate(205, 60)">
+      <rect width="310" height="360" rx="20" fill="#0D1B2A" stroke="rgba(59, 130, 246, 0.4)" stroke-width="2"/>
+      
+      <!-- Calculator Screen Display -->
+      <rect x="20" y="20" width="270" height="70" rx="12" fill="url(#calcDisplay)" stroke="rgba(148, 163, 184, 0.2)"/>
+      <text x="270" y="48" font-family="sans-serif" font-size="13" fill="#94A3B8" text-anchor="end">1,250 × 8.5</text>
+      <text x="270" y="76" font-family="Manrope, monospace" font-size="28" font-weight="900" fill="#22D3EE" text-anchor="end">10,625</text>
+
+      <!-- Keypad Grid -->
+      <g transform="translate(20, 105)">
+        <!-- Row 1 -->
+        <rect x="0" y="0" width="60" height="42" rx="10" fill="#EF4444" opacity="0.2" stroke="#EF4444"/>
+        <text x="22" y="26" font-family="sans-serif" font-size="14" font-weight="800" fill="#EF4444">AC</text>
+
+        <rect x="70" y="0" width="60" height="42" rx="10" fill="url(#btnGrad)" stroke="rgba(148, 163, 184, 0.2)"/>
+        <text x="90" y="26" font-family="sans-serif" font-size="14" font-weight="700" fill="#F8FAFC">DEL</text>
+
+        <rect x="140" y="0" width="60" height="42" rx="10" fill="url(#btnGrad)" stroke="rgba(148, 163, 184, 0.2)"/>
+        <text x="163" y="26" font-family="sans-serif" font-size="14" font-weight="700" fill="#22D3EE">%</text>
+
+        <rect x="210" y="0" width="60" height="42" rx="10" fill="url(#orangeGrad)"/>
+        <text x="236" y="26" font-family="sans-serif" font-size="16" font-weight="800" fill="#FFF">÷</text>
+
+        <!-- Row 2 -->
+        <rect x="0" y="50" width="60" height="42" rx="10" fill="url(#btnGrad)" stroke="rgba(148, 163, 184, 0.2)"/>
+        <text x="25" y="76" font-family="sans-serif" font-size="14" font-weight="700" fill="#F8FAFC">7</text>
+
+        <rect x="70" y="50" width="60" height="42" rx="10" fill="url(#btnGrad)" stroke="rgba(148, 163, 184, 0.2)"/>
+        <text x="95" y="76" font-family="sans-serif" font-size="14" font-weight="700" fill="#F8FAFC">8</text>
+
+        <rect x="140" y="50" width="60" height="42" rx="10" fill="url(#btnGrad)" stroke="rgba(148, 163, 184, 0.2)"/>
+        <text x="165" y="76" font-family="sans-serif" font-size="14" font-weight="700" fill="#F8FAFC">9</text>
+
+        <rect x="210" y="50" width="60" height="42" rx="10" fill="url(#orangeGrad)"/>
+        <text x="236" y="76" font-family="sans-serif" font-size="16" font-weight="800" fill="#FFF">×</text>
+
+        <!-- Row 3 -->
+        <rect x="0" y="100" width="60" height="42" rx="10" fill="url(#btnGrad)" stroke="rgba(148, 163, 184, 0.2)"/>
+        <text x="25" y="126" font-family="sans-serif" font-size="14" font-weight="700" fill="#F8FAFC">4</text>
+
+        <rect x="70" y="100" width="60" height="42" rx="10" fill="url(#btnGrad)" stroke="rgba(148, 163, 184, 0.2)"/>
+        <text x="95" y="126" font-family="sans-serif" font-size="14" font-weight="700" fill="#F8FAFC">5</text>
+
+        <rect x="140" y="100" width="60" height="42" rx="10" fill="url(#btnGrad)" stroke="rgba(148, 163, 184, 0.2)"/>
+        <text x="165" y="126" font-family="sans-serif" font-size="14" font-weight="700" fill="#F8FAFC">6</text>
+
+        <rect x="210" y="100" width="60" height="42" rx="10" fill="url(#orangeGrad)"/>
+        <text x="236" y="126" font-family="sans-serif" font-size="16" font-weight="800" fill="#FFF">−</text>
+
+        <!-- Row 4 -->
+        <rect x="0" y="150" width="60" height="42" rx="10" fill="url(#btnGrad)" stroke="rgba(148, 163, 184, 0.2)"/>
+        <text x="25" y="176" font-family="sans-serif" font-size="14" font-weight="700" fill="#F8FAFC">1</text>
+
+        <rect x="70" y="150" width="60" height="42" rx="10" fill="url(#btnGrad)" stroke="rgba(148, 163, 184, 0.2)"/>
+        <text x="95" y="176" font-family="sans-serif" font-size="14" font-weight="700" fill="#F8FAFC">2</text>
+
+        <rect x="140" y="150" width="60" height="42" rx="10" fill="url(#btnGrad)" stroke="rgba(148, 163, 184, 0.2)"/>
+        <text x="165" y="176" font-family="sans-serif" font-size="14" font-weight="700" fill="#F8FAFC">3</text>
+
+        <rect x="210" y="150" width="60" height="42" rx="10" fill="url(#orangeGrad)"/>
+        <text x="234" y="176" font-family="sans-serif" font-size="16" font-weight="800" fill="#FFF">+</text>
+
+        <!-- Row 5 -->
+        <rect x="0" y="200" width="130" height="42" rx="10" fill="url(#btnGrad)" stroke="rgba(148, 163, 184, 0.2)"/>
+        <text x="60" y="226" font-family="sans-serif" font-size="14" font-weight="700" fill="#F8FAFC">0</text>
+
+        <rect x="140" y="200" width="60" height="42" rx="10" fill="url(#btnGrad)" stroke="rgba(148, 163, 184, 0.2)"/>
+        <text x="167" y="226" font-family="sans-serif" font-size="14" font-weight="700" fill="#F8FAFC">.</text>
+
+        <rect x="210" y="200" width="60" height="42" rx="10" fill="url(#cyanGrad)"/>
+        <text x="235" y="226" font-family="sans-serif" font-size="16" font-weight="900" fill="#FFF">=</text>
+      </g>
+    </g>
+  </g>
+</svg>

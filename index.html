@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trần Vũ Việt Quang — Personal Portfolio | VQ Việt Quang</title>
+  <meta name="description" content="Trang web cá nhân của Trần Vũ Việt Quang - Sinh viên Công nghệ thông tin Viện Đào tạo Quốc tế NIIE Trường Đại học Nguyễn Tất Thành. Front-end Developer & UI/UX Enthusiast.">
+  
+  <!-- Google Fonts: Manrope & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap 5.3 & Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+  
+  <!-- Custom CSS files -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="logo-figma fs-2 mb-2">
+      <div class="logo-icon-box">VQ</div>
+      <div>Việt Quang</div>
+    </div>
+    <div class="text-secondary small fw-medium">Đang khởi tạo trải nghiệm...</div>
+    <div class="loader-bar">
+      <div class="loader-progress"></div>
+    </div>
+  </div>
+
+  <!-- HEADER & NAVIGATION -->
+  <header class="header-sticky">
+    <div class="container-custom d-flex align-items-center justify-content-between">
+      
+      <!-- Figma Logo VQ Việt Quang -->
+      <a href="index.html" class="logo-figma">
+        <div class="logo-icon-box">VQ</div>
+        <div>Việt Quang</div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="d-none d-lg-flex align-items-center gap-3">
+        <a href="#hero" class="nav-link-custom active">Giới thiệu</a>
+        <a href="#skills" class="nav-link-custom">Kỹ năng</a>
+        <a href="#projects" class="nav-link-custom">Dự án</a>
+        <a href="shop.html" class="nav-link-custom text-cyan">Tech Store</a>
+        <a href="#contact" class="nav-link-custom">Liên hệ</a>
+      </nav>
+
+      <!-- Action Buttons & Controls -->
+      <div class="d-flex align-items-center gap-3">
+        <a href="shop.html" class="btn-header-store d-none d-sm-inline-flex">
+          🖥️ Xem cửa hàng
+        </a>
+
+        <button id="themeToggleBtn" class="btn-icon-custom rounded-circle" aria-label="Đổi giao diện" title="Đổi giao diện">
+          <i class="bi bi-sun-fill"></i>
+        </button>
+
+        <a href="shop.html" class="cart-btn-wrapper btn-icon-custom rounded-circle" aria-label="Xem giỏ hàng" title="Giỏ hàng TechStore">
+          <i class="bi bi-bag-fill"></i>
+          <span id="cartBadge" class="cart-badge" style="display: none;">0</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="btn-icon-custom d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+          <i class="bi bi-list fs-4"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Offcanvas Drawer -->
+  <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="mobileMenu" style="background-color: var(--bg-secondary) !important;">
+    <div class="offcanvas-header border-bottom border-secondary border-opacity-25">
+      <div class="logo-figma">
+        <div class="logo-icon-box">VQ</div>
+        <div>Việt Quang</div>
+      </div>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column gap-3 fs-5 pt-4">
+      <a href="#hero" class="nav-link-custom active" data-bs-dismiss="offcanvas">Trang chủ</a>
+      <a href="#about-intro" class="nav-link-custom" data-bs-dismiss="offcanvas">Giới thiệu</a>
+      <a href="#skills" class="nav-link-custom" data-bs-dismiss="offcanvas">Kỹ năng</a>
+      <a href="#projects" class="nav-link-custom" data-bs-dismiss="offcanvas">Dự án</a>
+      <a href="shop.html" class="nav-link-custom text-cyan">Tech Store <i class="bi bi-arrow-right"></i></a>
+      <a href="#contact" class="nav-link-custom" data-bs-dismiss="offcanvas">Liên hệ</a>
+
+      <div class="mt-auto pt-4 border-top border-secondary border-opacity-25">
+        <a href="shop.html" class="btn-header-store w-100 justify-content-center">
+          🖥️ Đến Tech Store
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 1. TOP HERO AVATAR SECTION (Exact Figma Screenshot Original 1) -->
+  <section id="hero" class="hero-section">
+    <div class="container-custom">
+      <div class="row align-items-center gy-5">
+        
+        <!-- Left Hero Content -->
+        <div class="col-lg-7">
+          <div class="badge-blue-figma mb-4">
+            👋 Xin chào, mình là
+          </div>
+
+          <h1 class="mb-2 fw-extrabold" style="font-size: clamp(40px, 5vw, 64px); line-height: 1.08; letter-spacing: -1.5px;">
+            Trần Vũ <br>
+            Việt Quang
+          </h1>
+
+          <p class="text-cyan fw-bold mb-4 fs-4" style="letter-spacing: -0.3px;">
+            Sinh viên CNTT &amp; Front-end Developer
+          </p>
+
+          <p class="fs-5 mb-4 text-secondary" style="max-width: 520px; line-height: 1.75;">
+            Mình yêu thích việc biến những ý tưởng thành các giao diện hiện đại, trực quan và thân thiện với người dùng.
+          </p>
+
+          <div class="d-flex flex-wrap gap-3 mb-4">
+            <a href="#projects" class="btn-header-store py-3 px-4 fs-6">
+              🚀 Xem dự án
+            </a>
+            <a href="#contact" class="btn-secondary-figma py-3 px-4 fs-6">
+              ✉️ Liên hệ với tôi
+            </a>
+          </div>
+
+          <!-- Social Links -->
+          <div class="d-flex align-items-center gap-3">
+            <a href="https://github.com" target="_blank" class="btn-icon-custom" title="GitHub">⟨⟩</a>
+            <a href="https://linkedin.com" target="_blank" class="btn-icon-custom" title="LinkedIn">in</a>
+            <a href="https://www.facebook.com/tunnee06?locale=vi_VN" target="_blank" class="btn-icon-custom" title="Facebook">f</a>
+            
+            <span class="badge-green ms-2">
+              ✓ Sẵn sàng học hỏi &amp; hợp tác
+            </span>
+          </div>
+        </div>
+
+        <!-- Right Hero Avatar Image & 4 Floating Pill Badges -->
+        <div class="col-lg-5">
+          <div class="hero-avatar-wrapper">
+            <div class="floating-skill-tag skill-tag-1">
+              HTML5
+            </div>
+            <div class="floating-skill-tag skill-tag-2">
+              JavaScript
+            </div>
+            <div class="floating-skill-tag skill-tag-3">
+              CSS3
+            </div>
+            <div class="floating-skill-tag skill-tag-4">
+              Figma
+            </div>
+
+            <div class="avatar-frame">
+              <img src="assets/images/profile/avatar.png" alt="Trần Vũ Việt Quang">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. ABOUT INTRO & STAT CARDS SECTION (Exact Figma Screenshot Portfolio 1) -->
+  <section id="about-intro" class="section-padding pt-0">
+    <div class="container-custom">
+      <div class="row align-items-center gy-5">
+        
+        <!-- Left Column: About Intro -->
+        <div class="col-lg-7">
+          <div class="badge-blue-figma mb-3">
+            📍 Về bản thân
+          </div>
+
+          <h2 class="mb-4 fw-extrabold" style="font-size: clamp(32px, 4vw, 48px); line-height: 1.15;">
+            Mình là ai và <br>
+            mình đang hướng đến đâu?
+          </h2>
+
+          <p class="fs-5 text-secondary mb-3" style="line-height: 1.7;">
+            Hiện mình là sinh viên ngành <strong>Công nghệ thông tin</strong> tại Viện Đào tạo Quốc tế NIIE — Trường Đại học Nguyễn Tất Thành, yêu thích lập trình web, thiết kế giao diện và trải nghiệm người dùng.
+          </p>
+
+          <p class="fs-6 text-secondary mb-4" style="line-height: 1.7;">
+            Mục tiêu của mình là phát triển thành một <strong>Front-end Developer</strong> chuyên nghiệp, có khả năng tạo ra những sản phẩm đẹp, dễ sử dụng và mang lại giá trị thực tế.
+          </p>
+
+          <div class="d-flex flex-wrap gap-3">
+            <a href="#projects" class="btn-header-store py-3 px-4 fs-6">
+              Xem dự án →
+            </a>
+            <a href="#contact" class="btn-secondary-figma py-3 px-4 fs-6">
+              Liên hệ
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: 2x2 Grid of Stat Cards -->
+        <div class="col-lg-5">
+          <div class="row g-3">
+            
+            <div class="col-6">
+              <div class="stat-card-figma">
+                <div class="stat-icon">🚀</div>
+                <div class="stat-number counter-anim" data-count="3" data-suffix="+">00+</div>
+                <div class="stat-label">Dự án học tập</div>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="stat-card-figma">
+                <div class="stat-icon">⚡</div>
+                <div class="stat-number counter-anim" data-count="8" data-suffix="+">00+</div>
+                <div class="stat-label">Kỹ năng công nghệ</div>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="stat-card-figma">
+                <div class="stat-icon">📅</div>
+                <div class="stat-number counter-anim" data-count="1" data-suffix="+">00+</div>
+                <div class="stat-label">Năm học lập trình</div>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="stat-card-figma">
+                <div class="stat-icon">💪</div>
+                <div class="stat-number counter-anim" data-count="100" data-suffix="%">00%</div>
+                <div class="stat-label">Tinh thần học hỏi</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. SKILLS SECTION (Exact Figma Screenshot Portfolio 2) -->
+  <section id="skills" class="section-padding bg-secondary bg-opacity-25">
+    <div class="container-custom">
+      <div class="section-header">
+        <h2>Những gì tôi biết</h2>
+        <p>Các kỹ năng mình đang phát triển trong quá trình học tập và tự nghiên cứu</p>
+      </div>
+
+      <div class="row g-4">
+        
+        <!-- Column 1: Front-end -->
+        <div class="col-md-6 col-lg-4">
+          <div class="skill-card h-100">
+            <div class="d-flex align-items-center gap-2 mb-4">
+              <span class="fs-4 text-cyan">🌐</span>
+              <h4 class="fs-5 mb-0 fw-bold text-title">Front-end</h4>
+            </div>
+
+            <div class="mb-3">
+              <div class="d-flex justify-content-between small fw-bold mb-1 text-title">
+                <span>🌐 HTML5</span> <span>88%</span>
+              </div>
+              <div class="progress-custom"><div class="progress-bar-custom" data-width="88"></div></div>
+            </div>
+
+            <div class="mb-3">
+              <div class="d-flex justify-content-between small fw-bold mb-1 text-title">
+                <span>🎨 CSS3</span> <span>82%</span>
+              </div>
+              <div class="progress-custom"><div class="progress-bar-custom" data-width="82"></div></div>
+            </div>
+
+            <div class="mb-3">
+              <div class="d-flex justify-content-between small fw-bold mb-1 text-title">
+                <span>⚡ JavaScript</span> <span>75%</span>
+              </div>
+              <div class="progress-custom"><div class="progress-bar-custom" data-width="75"></div></div>
+            </div>
+
+            <div>
+              <div class="d-flex justify-content-between small fw-bold mb-1 text-title">
+                <span>📱 Responsive Design</span> <span>85%</span>
+              </div>
+              <div class="progress-custom"><div class="progress-bar-custom" data-width="85"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 2: Back-end & CSDL -->
+        <div class="col-md-6 col-lg-4">
+          <div class="skill-card h-100">
+            <div class="d-flex align-items-center gap-2 mb-4">
+              <span class="fs-4 text-primary">⚙️</span>
+              <h4 class="fs-5 mb-0 fw-bold text-title">Back-end &amp; CSDL</h4>
+            </div>
+
+            <div class="mb-3">
+              <div class="d-flex justify-content-between small fw-bold mb-1 text-title">
+                <span>🐘 PHP</span> <span>60%</span>
+              </div>
+              <div class="progress-custom"><div class="progress-bar-custom" data-width="60"></div></div>
+            </div>
+
+            <div class="mb-3">
+              <div class="d-flex justify-content-between small fw-bold mb-1 text-title">
+                <span>💾 MySQL</span> <span>65%</span>
+              </div>
+              <div class="progress-custom"><div class="progress-bar-custom" data-width="65"></div></div>
+            </div>
+
+            <div>
+              <div class="d-flex justify-content-between small fw-bold mb-1 text-title">
+                <span>🔗 REST API cơ bản</span> <span>55%</span>
+              </div>
+              <div class="progress-custom"><div class="progress-bar-custom" data-width="55"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 3: Công cụ & Thiết kế -->
+        <div class="col-md-6 col-lg-4">
+          <div class="skill-card h-100">
+            <div class="d-flex align-items-center gap-2 mb-4">
+              <span class="fs-4 text-orange">🛠️</span>
+              <h4 class="fs-5 mb-0 fw-bold text-title">Công cụ &amp; Thiết kế</h4>
+            </div>
+
+            <div class="mb-3">
+              <div class="d-flex justify-content-between small fw-bold mb-1 text-title">
+                <span>✏️ Figma</span> <span>80%</span>
+              </div>
+              <div class="progress-custom"><div class="progress-bar-custom" data-width="80"></div></div>
+            </div>
+
+            <div class="mb-3">
+              <div class="d-flex justify-content-between small fw-bold mb-1 text-title">
+                <span>🐙 Git &amp; GitHub</span> <span>70%</span>
+              </div>
+              <div class="progress-custom"><div class="progress-bar-custom" data-width="70"></div></div>
+            </div>
+
+            <div>
+              <div class="d-flex justify-content-between small fw-bold mb-1 text-title">
+                <span>💻 VS Code</span> <span>90%</span>
+              </div>
+              <div class="progress-custom"><div class="progress-bar-custom" data-width="90"></div></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. EDUCATION & GOALS SECTION (Exact Figma Screenshot Portfolio 3 & 4) -->
+  <section id="about" class="section-padding">
+    <div class="container-custom">
+      <div class="section-header">
+        <h2>Học vấn &amp; Mục tiêu</h2>
+      </div>
+
+      <div class="row g-4">
+        
+        <!-- Left: Học vấn Timeline -->
+        <div class="col-lg-6">
+          <div class="card-glass h-100">
+            <div class="d-flex align-items-center gap-2 mb-4">
+              <span class="fs-3">🏫</span>
+              <h3 class="fs-4 fw-bold mb-0 text-title">Học vấn</h3>
+            </div>
+
+            <div class="timeline-figma">
+              
+              <div class="timeline-item-figma">
+                <div class="timeline-card-figma">
+                  <span class="badge-blue-figma mb-2">2024 – 2028</span>
+                  <h4 class="fs-5 fw-bold text-title mb-1">Công nghệ thông tin</h4>
+                  <div class="text-secondary small">Viện Đào tạo Quốc tế NIIE</div>
+                  <div class="text-secondary small">Trường Đại học Nguyễn Tất Thành</div>
+                </div>
+              </div>
+
+              <div class="timeline-item-figma">
+                <div class="timeline-card-figma">
+                  <span class="badge-blue-figma mb-2">2021 – 2024</span>
+                  <h4 class="fs-5 fw-bold text-title mb-1">Trung học Phổ thông</h4>
+                  <div class="text-secondary small">Tốt nghiệp và tiếp tục theo đuổi đam mê lập trình</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Mục tiêu Stack -->
+        <div class="col-lg-6">
+          <div class="card-glass h-100">
+            <div class="d-flex align-items-center gap-2 mb-4">
+              <span class="fs-3">🎯</span>
+              <h3 class="fs-4 fw-bold mb-0 text-title">Mục tiêu</h3>
+            </div>
+
+            <div class="d-flex flex-column gap-3">
+              <div class="goal-item-figma">
+                <span class="fs-5 text-success">✅</span>
+                <span>Hoàn thiện kỹ năng Front-end với HTML, CSS và JavaScript</span>
+              </div>
+              <div class="goal-item-figma">
+                <span class="fs-5 text-purple">⚛️</span>
+                <span>Học React và phát triển giao diện theo kiến trúc component</span>
+              </div>
+              <div class="goal-item-figma">
+                <span class="fs-5 text-cyan">🎨</span>
+                <span>Cải thiện kiến thức UI/UX và thiết kế sản phẩm số</span>
+              </div>
+              <div class="goal-item-figma">
+                <span class="fs-5 text-warning">💛</span>
+                <span>Tham gia các dự án thực tế và xây dựng portfolio chuyên nghiệp</span>
+              </div>
+              <div class="goal-item-figma">
+                <span class="fs-5 text-primary">🌐</span>
+                <span>Phát triển khả năng làm việc nhóm và giao tiếp kỹ thuật</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. FEATURED PROJECTS SECTION (Exact Figma Screenshot Portfolio 5) -->
+  <section id="projects" class="section-padding bg-secondary bg-opacity-25">
+    <div class="container-custom">
+      <div class="text-center mb-5">
+        <span class="badge-blue-figma mb-2 d-inline-block">🚀 Dự án</span>
+        <h2 class="fw-extrabold" style="font-size: 2.25rem;">Dự án nổi bật</h2>
+        <p class="text-secondary">Những sản phẩm mình đã xây dựng trong quá trình học tập</p>
+      </div>
+
+      <div class="row g-4">
+        
+        <!-- Project 1: Website Portfolio cá nhân -->
+        <div class="col-lg-4 col-md-6">
+          <div class="project-card">
+            <div class="project-img-wrapper">
+              <img src="assets/images/portfolio/project-portfolio.svg" alt="Website Portfolio cá nhân">
+            </div>
+            <div class="p-4 d-flex flex-column flex-grow-1">
+              <div class="d-flex gap-2 flex-wrap mb-3">
+                <span class="badge-blue-figma">HTML</span>
+                <span class="badge-blue-figma">CSS</span>
+                <span class="badge-blue-figma">JavaScript</span>
+              </div>
+              <h4 class="fs-5 fw-bold mb-2 text-title">Website Portfolio cá nhân</h4>
+              <p class="small text-secondary mb-4 flex-grow-1">Website giới thiệu thông tin, kỹ năng và định hướng nghề nghiệp của bản thân.</p>
+              <div class="d-flex align-items-center gap-2 mt-auto">
+                <a href="index.html" class="btn-header-store flex-grow-1 justify-content-center">Xem chi tiết</a>
+                <a href="https://github.com" target="_blank" class="btn-icon-custom">⟨⟩</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: TechGear Store -->
+        <div class="col-lg-4 col-md-6">
+          <div class="project-card">
+            <div class="project-img-wrapper">
+              <img src="assets/images/portfolio/project-techgear.svg" alt="TechGear Store">
+            </div>
+            <div class="p-4 d-flex flex-column flex-grow-1">
+              <div class="d-flex gap-2 flex-wrap mb-3">
+                <span class="badge-orange-figma">Figma</span>
+                <span class="badge-blue-figma">HTML</span>
+                <span class="badge-blue-figma">CSS</span>
+                <span class="badge-blue-figma">JavaScript</span>
+              </div>
+              <h4 class="fs-5 fw-bold mb-2 text-title">TechGear Store</h4>
+              <p class="small text-secondary mb-4 flex-grow-1">Giao diện cửa hàng thiết bị máy tính hiện đại, responsive và thân thiện người dùng.</p>
+              <div class="d-flex align-items-center gap-2 mt-auto">
+                <a href="shop.html" class="btn-header-store flex-grow-1 justify-content-center">Xem chi tiết</a>
+                <a href="https://github.com" target="_blank" class="btn-icon-custom">⟨⟩</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Ứng dụng máy tính -->
+        <div class="col-lg-4 col-md-6">
+          <div class="project-card">
+            <div class="project-img-wrapper">
+              <img src="assets/images/portfolio/project-calculator.svg" alt="Ứng dụng máy tính">
+            </div>
+            <div class="p-4 d-flex flex-column flex-grow-1">
+              <div class="d-flex gap-2 flex-wrap mb-3">
+                <span class="badge-blue-figma">JavaScript</span>
+              </div>
+              <h4 class="fs-5 fw-bold mb-2 text-title">Ứng dụng máy tính</h4>
+              <p class="small text-secondary mb-4 flex-grow-1">Ứng dụng máy tính cơ bản với giao diện trực quan, hiệu ứng tương tác mượt mà.</p>
+              <div class="d-flex align-items-center gap-2 mt-auto">
+                <button onclick="showToast('Smart Calculator', 'Ứng dụng máy tính sẵn sàng!', 'bi-calculator-fill')" class="btn-header-store flex-grow-1 justify-content-center">Xem chi tiết</button>
+                <a href="https://github.com" target="_blank" class="btn-icon-custom">⟨⟩</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. TECH PASSION SPOTLIGHT BANNER (Exact New Figma Screenshot 1) -->
+  <section class="section-padding pt-0">
+    <div class="container-custom">
+      <div class="tech-passion-banner-figma">
+        <div class="spotlight-content" style="max-width: 600px;">
+          <div class="badge-orange-figma mb-3">
+            💻 Đam mê công nghệ
+          </div>
+
+          <h2 class="fs-1 fw-extrabold text-title mb-4" style="line-height: 1.15;">
+            Không chỉ là lập trình — <br>
+            còn là niềm đam mê thiết bị
+          </h2>
+
+          <p class="fs-6 text-secondary mb-4" style="line-height: 1.7;">
+            Mình còn có niềm đam mê với thiết bị máy tính và các sản phẩm công nghệ. Từ bàn phím cơ, chuột gaming đến tai nghe studio — từ sở thích đó, mình đã xây dựng ý tưởng giao diện <strong>TechGear Store</strong>.
+          </p>
+
+          <a href="shop.html" class="btn-orange-figma py-3 px-4 fs-6">
+            🖥️ Khám phá TechGear Store →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. CONTACT SECTION (Exact New Figma Screenshot 2) -->
+  <section id="contact" class="section-padding">
+    <div class="container-custom">
+      <div class="section-header">
+        <h2>Hãy kết nối với mình</h2>
+        <p>Mình luôn sẵn sàng thảo luận về dự án, cơ hội học hỏi hoặc chỉ đơn giản là trao đổi về công nghệ</p>
+      </div>
+
+      <div class="row g-4">
+        
+        <!-- Left: 5 Stacked Info Cards -->
+        <div class="col-lg-5">
+          <div class="d-flex flex-column gap-3 h-100">
+            
+            <div class="contact-info-card-figma">
+              <div class="icon-box"><i class="bi bi-envelope-fill"></i></div>
+              <div>
+                <div class="text-secondary extra-small" style="font-size:0.775rem;">Email</div>
+                <div class="fw-bold text-title">2400002814@nttu.edu.vn</div>
+              </div>
+            </div>
+
+            <div class="contact-info-card-figma">
+              <div class="icon-box"><i class="bi bi-telephone-fill"></i></div>
+              <div>
+                <div class="text-secondary extra-small" style="font-size:0.775rem;">Điện thoại</div>
+                <div class="fw-bold text-title">098 765 4321</div>
+              </div>
+            </div>
+
+            <div class="contact-info-card-figma">
+              <div class="icon-box"><i class="bi bi-geo-alt-fill"></i></div>
+              <div>
+                <div class="text-secondary extra-small" style="font-size:0.775rem;">Địa chỉ</div>
+                <div class="fw-bold text-title">TP. Hồ Chí Minh, Việt Nam</div>
+              </div>
+            </div>
+
+            <div class="contact-info-card-figma">
+              <div class="icon-box"><i class="bi bi-clock-fill"></i></div>
+              <div>
+                <div class="text-secondary extra-small" style="font-size:0.775rem;">Thời gian phản hồi</div>
+                <div class="fw-bold text-title">Trong vòng 24 giờ</div>
+              </div>
+            </div>
+
+            <div class="contact-info-card-figma">
+              <div class="icon-box"><i class="bi bi-share-fill"></i></div>
+              <div>
+                <div class="text-secondary extra-small" style="font-size:0.775rem;">Mạng xã hội</div>
+                <div class="d-flex gap-2 mt-1">
+                  <a href="https://github.com" target="_blank" class="btn-icon-custom" style="width:32px; height:32px; font-size:0.85rem;" title="GitHub">⟨⟩</a>
+                  <a href="https://linkedin.com" target="_blank" class="btn-icon-custom" style="width:32px; height:32px; font-size:0.85rem;" title="LinkedIn">in</a>
+                  <a href="https://www.facebook.com/tunnee06?locale=vi_VN" target="_blank" class="btn-icon-custom" style="width:32px; height:32px; font-size:0.85rem;" title="Facebook">f</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right: Message Form -->
+        <div class="col-lg-7">
+          <div class="card-glass">
+            <h3 class="mb-4 fs-4 text-title fw-bold">Gửi tin nhắn</h3>
+            <form id="contactForm">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="contactName" class="form-label text-secondary small fw-bold">Họ và tên</label>
+                  <input type="text" id="contactName" class="form-control-custom" placeholder="Nguyễn Văn A" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="contactEmail" class="form-label text-secondary small fw-bold">Email</label>
+                  <input type="email" id="contactEmail" class="form-control-custom" placeholder="email@example.com" required>
+                </div>
+                <div class="col-12">
+                  <label for="contactMessage" class="form-label text-secondary small fw-bold">Nội dung tin nhắn</label>
+                  <textarea id="contactMessage" rows="5" class="form-control-custom" placeholder="Bạn muốn nhắn gì với mình?" required></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn-header-store w-100 justify-content-center py-3 fs-6">
+                    ✉️ Gửi tin nhắn
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. FOOTER (Exact Figma Alignment) -->
+  <footer class="footer-figma">
+    <div class="container-custom">
+      
+      <div class="row gy-4 mb-5">
+        <div class="col-lg-4">
+          <div class="logo-figma mb-3">
+            <div class="logo-icon-box">VQ</div>
+            <div>Việt Quang</div>
+          </div>
+          <p class="text-secondary small me-lg-4" style="line-height: 1.7;">
+            Sinh viên Công nghệ thông tin, Front-end Developer và UI/UX Designer yêu thích tạo ra những sản phẩm đẹp và trực quan.
+          </p>
+          <div class="d-flex gap-2 mt-3">
+            <a href="https://github.com" target="_blank" class="btn-icon-custom">⟨⟩</a>
+            <a href="https://linkedin.com" target="_blank" class="btn-icon-custom">in</a>
+            <a href="https://www.facebook.com/tunnee06?locale=vi_VN" target="_blank" class="btn-icon-custom">f</a>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h5 class="fs-6 fw-bold mb-3 text-title" style="letter-spacing: 0.08em; font-size: 0.85rem;">PORTFOLIO</h5>
+          <ul class="list-unstyled text-secondary small d-flex flex-column gap-2">
+            <li><a href="#hero">Giới thiệu</a></li>
+            <li><a href="#skills">Kỹ năng</a></li>
+            <li><a href="#projects">Dự án</a></li>
+            <li><a href="#about">Học vấn</a></li>
+            <li><a href="#contact">Liên hệ</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <h5 class="fs-6 fw-bold mb-3 text-title" style="letter-spacing: 0.08em; font-size: 0.85rem;">TECHGEAR STORE</h5>
+          <ul class="list-unstyled text-secondary small d-flex flex-column gap-2">
+            <li><a href="shop.html#categories">Laptop</a></li>
+            <li><a href="shop.html#categories">Bàn phím</a></li>
+            <li><a href="shop.html#categories">Chuột</a></li>
+            <li><a href="shop.html#categories">Tai nghe</a></li>
+            <li><a href="shop.html#categories">Màn hình</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <h5 class="fs-6 fw-bold mb-3 text-title" style="letter-spacing: 0.08em; font-size: 0.85rem;">HỖ TRỢ</h5>
+          <ul class="list-unstyled text-secondary small d-flex flex-column gap-2">
+            <li><a href="#">Chính sách đổi trả</a></li>
+            <li><a href="#">Bảo hành</a></li>
+            <li><a href="#">Giao hàng</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Floating Contact Bar in Footer -->
+      <div class="footer-contact-bar-figma mb-4">
+        <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
+          <div class="d-flex flex-wrap align-items-center gap-4">
+            <div class="d-flex align-items-center gap-2">
+              <span class="text-cyan fs-5">📧</span>
+              <div>
+                <div class="extra-small text-secondary" style="font-size:0.75rem;">Email</div>
+                <div class="fw-bold text-title small">2400002814@nttu.edu.vn</div>
+              </div>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <span class="text-cyan fs-5">📱</span>
+              <div>
+                <div class="extra-small text-secondary" style="font-size:0.75rem;">Điện thoại</div>
+                <div class="fw-bold text-title small">098 765 4321</div>
+              </div>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <span class="text-cyan fs-5">📍</span>
+              <div>
+                <div class="extra-small text-secondary" style="font-size:0.75rem;">Địa chỉ</div>
+                <div class="fw-bold text-title small">TP. Hồ Chí Minh, Việt Nam</div>
+              </div>
+            </div>
+          </div>
+
+          <a href="#contact" class="btn-header-store">
+            ✉️ Liên hệ ngay
+          </a>
+        </div>
+      </div>
+
+      <!-- Bottom Copyright bar -->
+      <div class="border-top border-secondary border-opacity-25 pt-3 d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2 small text-secondary">
+        <div>© 2026 Trần Vũ Việt Quang. Thiết kế với niềm đam mê công nghệ. 💙</div>
+        <div class="d-flex gap-3">
+          <a href="#" class="text-secondary">Điều khoản sử dụng</a>
+          <a href="#" class="text-secondary">Chính sách bảo mật</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Back To Top Floating Button -->
+  <button id="backToTop" class="back-to-top" aria-label="Lên đầu trang"><i class="bi bi-arrow-up-short fs-3"></i></button>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
